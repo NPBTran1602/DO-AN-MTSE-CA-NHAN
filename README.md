@@ -98,6 +98,8 @@ MONGO_URI=mongodb://127.0.0.1:27017/forgot_password_demo
 
 ## 4. Tạo một tài khoản trong MongoDB để test
 
+Cách 1: Tạo bằng lệnh seed
+
 Mở file `.env` và sửa thông tin tài khoản test:
 
 ```env
@@ -126,6 +128,38 @@ Vào MongoDB Compass sẽ thấy:
 Database: forgot_password_demo
 Collection: users
 Document: tài khoản test vừa tạo
+```
+
+Cách 2: Tạo trực tiếp trong MongoDB Compass
+
+Mở MongoDB Compass, connect:
+
+```txt
+mongodb://127.0.0.1:27017
+```
+
+Vào database:
+
+```txt
+forgot_password_demo
+```
+
+Vào collection:
+
+```txt
+users
+```
+
+Thêm document mới:
+
+Ví dụ:
+```txt
+{
+  "fullName": "Nguyen Van A",
+  "email": "nguyenvana@gmail.com",
+  "password": "$2a$10$placeholder",
+  "resetPasswordOtpVerified": false
+}
 ```
 
 ## 5. Cấu hình Gmail để gửi OTP thật
