@@ -108,6 +108,11 @@ SEED_EMAIL=test@gmail.com
 SEED_PASSWORD=123456
 ```
 
+Lưu ý:
+
+- `SEED_EMAIL` nên là Gmail thật của bạn nếu muốn nhận OTP thật.
+- Nếu chỉ test nhanh, để email bất kỳ cũng được, OTP sẽ hiện trong terminal khi chưa cấu hình Gmail gửi mail.
+
 Sau đó chạy:
 
 ```bash
@@ -132,7 +137,7 @@ Document: tài khoản test vừa tạo
 
 Cách 2: Tạo trực tiếp trong MongoDB Compass
 
-Mở MongoDB Compass, connect:
+Mở MongoDB Compass, connect: 
 
 ```txt
 mongodb://127.0.0.1:27017
@@ -152,7 +157,6 @@ users
 
 Thêm document mới:
 
-Ví dụ:
 ```txt
 {
   "fullName": "Nguyen Van A",
@@ -272,3 +276,4 @@ Body:
   "newPassword": "654321"
 }
 ```
+
